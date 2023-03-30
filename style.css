@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+
+:root {
+    --ratings-items-offset: -2.75rem;
+    --cards-offset: 1.25rem;
+}
+
+*, 
+*::before,
+*::after, 
+ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: 'League Spartan', sans-serif;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem calc(var(--cards-offset)*3);
+}
+
+.purple {
+    color: hsl(333, 80%, 67%);
+    display: block;
+}
+
+.upper-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: calc(400px + 400px + 2rem)) {
+    .upper-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.upper-section__text {
+    /*based on mobile width*/
+    width: 430px;
+    color: hsl(303, 10%, 53%);
+}
+
+.upper-section__text-heading {
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    font-size: 3.25rem;
+    line-height: 1em;
+}
+
+.upper-section__text-paragraph {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.upper-section__ratings {
+    /*based on mobile width*/
+   /* width: 400px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    list-style-type: none;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+
+.upper-section__ratings-item {
+    margin: 0.75rem 0;
+    padding: 1rem;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 0.25rem;
+}
+
+@media (max-width: 400px) {
+    .upper-section__ratings-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+.upper-section__ratings-stars {
+    margin-right: 1rem;
+    display: inline;
+}
+
+.ratings-item-first {
+    /*calculated to make the offset of this item double of the second item*/
+    transform: translateX(calc(var(--ratings-items-offset)*2));
+}
+
+.ratings-item-second {
+    transform: translateX(calc(var(--ratings-items-offset)*1));
+}
+
+@media (max-width: calc(400px + 400px + 2rem)) {
+    .ratings-item-first {
+        transform: translateX(0);
+    }
+
+    .ratings-item-second {
+        transform: translateX(0);
+    }
+}
+
+.lower-section {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0 0;
+}
+
+@media (max-width: calc(400px + 400px + 2rem)) {
+    .lower-section {
+        flex-direction: column;
+        width: 320px;
+        margin: 2rem auto;
+    }
+}
+
+.lower-section__card {
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    color: white;
+    font-weight: 400;
+}
+
+.lower-section__card-customer {
+    display: flex;
+    align-items: center;
+}
+
+.lower-section__card-customer__image {
+    border-radius: 9999rem;
+    height: 3rem;
+    margin-right: 2rem;
+}
+
+.lower-section__card-quote {
+    margin-top: 1rem;
+}
+
+.card-second {
+    margin: 0 2rem;
+    transform: translateY(var(--cards-offset));
+}
+
+@media (max-width: calc(400px + 400px + 2rem)) {
+    .card-second {
+        margin: 0;
+    }
+}
+
+.card-third {
+    transform: translateY(calc(var(--cards-offset)*2));
+}
