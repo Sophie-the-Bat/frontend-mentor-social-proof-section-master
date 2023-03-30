@@ -34,6 +34,8 @@ Users should be able to:
 
 couldn't see the background on my screen and didn't put it in
 
+getting faster setting up the html 💪
+
 ### Continued development
 
 maybe do a version with grid?
